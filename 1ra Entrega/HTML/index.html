@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi E-commerce Básico</title>
+    <link rel="stylesheet" href="/1ra Entrega/CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Tienda Online</h1>
+        <nav>
+            <button id="viewCartBtn">Ver Carrito (<span id="cartCount">0</span>)</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="productCarousel">
+            <h2>Nuestros Productos</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev">&lt;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="productsContainer">
+                        </div>
+                </div>
+                <button class="carousel-button next">&gt;</button>
+            </div>
+        </section>
+
+        <section id="addProductSection">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="addProductForm">
+                <input type="text" id="productName" placeholder="Nombre del Producto" required>
+                <textarea id="productDescription" placeholder="Descripción del Producto" required></textarea>
+                <input type="number" id="productPrice" placeholder="Precio" step="0.01" required>
+                <input type="text" id="productImage" placeholder="URL de la Imagen (opcional)">
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <section id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Tu Carrito de Compras</h2>
+                <div id="cartItems">
+                    </div>
+                <p>Total: $<span id="cartTotal">0.00</span></p>
+                <button id="checkoutBtn">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <section id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Simulación de Pago</h2>
+                <p>Aquí iría una integración real con una pasarela de pagos.</p>
+                <p>Por ahora, solo simularemos la confirmación.</p>
+                <button id="confirmPurchaseBtn">Confirmar Compra (Simulado)</button>
+            </div>
+        </section>
+
+        <section id="confirmationModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>¡Compra Exitosa!</h2>
+                <p>Tu pedido ha sido procesado (simulado).</p>
+                <p>Gracias por tu compra.</p>
+                <button id="continueShoppingBtn">Continuar Comprando</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="/1ra Entrega/JS/main.js"></script>
+</body>
+</html>
